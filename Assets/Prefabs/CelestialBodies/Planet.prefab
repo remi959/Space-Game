@@ -1,0 +1,248 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5489538738268562619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4154101778242093379}
+  - component: {fileID: 6429272454944939631}
+  - component: {fileID: 4024912131459325989}
+  - component: {fileID: 1133608392648521678}
+  - component: {fileID: 547021307654321209}
+  - component: {fileID: 1497543658543445073}
+  - component: {fileID: 8657411565317052286}
+  - component: {fileID: 680336891433704209}
+  - component: {fileID: 413502109895833055}
+  m_Layer: 0
+  m_Name: Planet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4154101778242093379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6429272454944939631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b706696a4d93512409927f61d748bd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetRadius: 50
+  surfaceBlendDistance: 40
+  maxInteriorDensity: 10
+  noiseLayers: []
+  biomeManager: {fileID: 4024912131459325989}
+  caveGenerator: {fileID: 1133608392648521678}
+--- !u!114 &4024912131459325989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa5a0e209600ba40bd8fdd3e9f57370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeNoise:
+    octaves: 2
+    lacunarity: 2
+    persistence: 0.5
+    scale: 50
+    strength: 1
+    minValue: -1
+    offset: {x: 0, y: 0, z: 0}
+  biomes:
+  - {fileID: 11400000, guid: 9909856ef1fd7ae49abcc2e756f70811, type: 2}
+  - {fileID: 11400000, guid: b1475c88e94c90e40b7e6a43cca263cd, type: 2}
+  - {fileID: 11400000, guid: b066da3f751108e448c7e0c817a226c3, type: 2}
+  blendWidth: 0.05
+  contrast: 1
+  sampleRadius: 100
+--- !u!114 &1133608392648521678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02837c442f6e22c4eaeacb18ae77d1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableCaves: 1
+  caveDensity: 0.8
+  caveColor: {r: 0.4, g: 0.35, b: 0.3, a: 1}
+  deepCaveColor: {r: 0.25, g: 0.2, b: 0.18, a: 1}
+  deepCaveDepth: 30
+  enableWormCaves: 1
+  wormNoise:
+    octaves: 5
+    lacunarity: 2
+    persistence: 0.5
+    scale: 60
+    strength: 8
+    minValue: 0
+    offset: {x: 0, y: 0, z: 0}
+  wormThreshold: 0.4
+  wormWidth: 3
+  enableRoomCaves: 0
+  roomPositionNoise:
+    octaves: 1
+    lacunarity: 2
+    persistence: 0.5
+    scale: 30
+    strength: 1
+    minValue: 0
+    offset: {x: 0, y: 0, z: 0}
+  roomThreshold: 0.75
+  roomRadius: 8
+  roomSizeVariation: 0.3
+  roomGridSize: 25
+  enableTunnelConnections: 0
+  tunnelRadius: 3
+  tunnelCurvature: 0.3
+  minDepth: 5
+  maxDepth: 40
+  maxTerrainHeight: 30
+  tunnelSearchRadius: 1
+--- !u!114 &547021307654321209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69db35393cbd70e44a2473155c25598e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voxelSize: 1
+  terrainMaterial: {fileID: 2100000, guid: 434daff2aa091ae4f8032aa709fed29a, type: 2}
+  enableChunkLOD: 1
+  lodConfig: {fileID: 0}
+  viewDistance: 5
+  lod1ViewDistance: 8
+  lod2ViewDistance: 12
+  lodUpdateInterval: 30
+  maxChunksPerFrame: 2
+  maxLODUpdatesPerFrame: 2
+--- !u!114 &1497543658543445073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45ab0e76141fe84aaf089afd700dcc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  densityProvider: {fileID: 6429272454944939631}
+  biomeManager: {fileID: 4024912131459325989}
+--- !u!114 &8657411565317052286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7a7126071353848b0747473cc3c79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vegetationAssets:
+  - {fileID: 11400000, guid: f0e5712d11172f64792276f767f2c2c3, type: 2}
+  - {fileID: 11400000, guid: 57dfb5d46fdf1eb41acf831f10e28d57, type: 2}
+  - {fileID: 11400000, guid: b132a11d4100e824aafa6b2eefeb4099, type: 2}
+  maxInstancesPerChunk: 100
+  positionJitter: 0.5
+  useNoiseDensity: 1
+  densityNoiseScale: 15
+  lodStartDistance: 30
+  billboardDistance: 60
+  cullDistance: 100
+  lodDensityMultiplier: 0.3
+  lodUpdateInterval: 5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  raycastHeight: 5
+  logSpawning: 0
+--- !u!114 &680336891433704209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689ac36d57afdd5438e7cca9881c7398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  densityProvider: {fileID: 6429272454944939631}
+  surfaceSampler: {fileID: 1497543658543445073}
+  biomeManager: {fileID: 4024912131459325989}
+  structures:
+  - {fileID: 11400000, guid: 2038e83b4632359408e6d67d8cd984f7, type: 2}
+  maxPlacementAttempts: 30
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  raycastHeight: 50
+  autoPlaceOnChunkGeneration: 0
+  structuresPerChunk: 1
+  logPlacements: 0
+  showPlacementGizmos: 0
+--- !u!114 &413502109895833055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489538738268562619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4ebf5df3abd99428340a463233b045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  densityProvider: {fileID: 6429272454944939631}
+  chunkManager: {fileID: 547021307654321209}
+  biomeManager: {fileID: 4024912131459325989}
+  caveGenerator: {fileID: 1133608392648521678}
+  vegetationSpawner: {fileID: 8657411565317052286}
+  structurePlacer: {fileID: 680336891433704209}
+  seed: 12345
+  playerTransform: {fileID: 0}
+  maxMeshUpdatesPerFrame: 4
+  immediateColliderOnModify: 1

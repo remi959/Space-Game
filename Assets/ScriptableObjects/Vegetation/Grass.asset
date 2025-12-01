@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e48bf3395d1d6b4d83fc6600de275ef, type: 3}
+  m_Name: Grass
+  m_EditorClassIdentifier: 
+  vegetationName: Grass
+  prefabVariants:
+  - {fileID: 1991978804857108, guid: b2e600f943c41f34a89a2843ea98a353, type: 3}
+  - {fileID: 1904171308060102, guid: fcd7ea59a703cb64dada04e84ec8a7e4, type: 3}
+  maxSlope: 60
+  density: 5
+  minScale: 0.8
+  maxScale: 1.2
+  minDistance: 0.01
+  allowedBiomes:
+  - {fileID: 11400000, guid: 9909856ef1fd7ae49abcc2e756f70811, type: 2}
+  - {fileID: 11400000, guid: b1475c88e94c90e40b7e6a43cca263cd, type: 2}
+  - {fileID: 11400000, guid: b066da3f751108e448c7e0c817a226c3, type: 2}
+  minHeight: -5
+  maxHeight: 100
