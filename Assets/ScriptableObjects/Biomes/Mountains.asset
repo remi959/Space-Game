@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Mountains
   m_EditorClassIdentifier: 
   biomeName: Mountains
-  debugColor: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 1}
-  heightMultiplier: 4
-  heightOffset: 0.5
+  preferredTemperature: 0.2
+  preferredHumidity: 0.5
+  temperatureTolerance: 0.3
+  humidityTolerance: 0.3
   terrainLayers:
   - layerName: Base Layer
     enabled: 1
@@ -47,6 +48,7 @@ MonoBehaviour:
     useFloor: 0
     floorValue: 0
     useFirstLayerAsMask: 0
-  groundColor: {r: 0.3537736, g: 0.3537736, b: 0.3537736, a: 1}
-  cliffColor: {r: 0.28235295, g: 0.28235295, b: 0.28235295, a: 1}
-  vegetationDensity: 0.5
+  heightMultiplier: 4
+  heightOffset: 0.5
+  surfaceColor: {r: 0, g: 1, b: 0, a: 1}
+  subsurfaceColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

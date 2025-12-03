@@ -25,32 +25,6 @@ public static class PlanetRaycast
     }
 
     /// <summary>
-    /// Raycasts toward planet center with fallback attempts.
-    /// Returns SurfacePoint for consistency.
-    /// </summary>
-    public static SurfacePoint FindSurface(
-        Vector3 worldPosition,
-        Vector3 planetCenter,
-        float planetRadius,
-        LayerMask groundLayer,
-        float raycastHeight = 50f)
-    {
-        if (RaycastTowardCenter(worldPosition, planetCenter, groundLayer, raycastHeight, out RaycastHit hit))
-        {
-            return new SurfacePoint
-            {
-                position = hit.point,
-                normal = hit.normal,
-                slope = PlanetMath.CalculateSlope(hit.point, hit.normal, planetCenter),
-                height = PlanetMath.GetHeightAboveSurface(hit.point, planetCenter, planetRadius),
-                isValid = true
-            };
-        }
-
-        return SurfacePoint.Invalid;
-    }
-
-    /// <summary>
     /// Finds surface with position jitter (for natural vegetation placement).
     /// </summary>
     public static bool FindSurfaceWithJitter(

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Plains
   m_EditorClassIdentifier: 
   biomeName: Plains
-  debugColor: {r: 0.10014736, g: 0.77254903, b: 0.0039215903, a: 1}
-  heightMultiplier: 1
-  heightOffset: 0
+  preferredTemperature: 0.5
+  preferredHumidity: 0.8
+  temperatureTolerance: 0.6
+  humidityTolerance: 0.8
   terrainLayers:
   - layerName: Terrain
     enabled: 1
@@ -32,6 +33,7 @@ MonoBehaviour:
     useFloor: 0
     floorValue: 0
     useFirstLayerAsMask: 0
-  groundColor: {r: 0.078431375, g: 0.61960787, b: 0.003921569, a: 1}
-  cliffColor: {r: 0.078431375, g: 0.61960787, b: 0.003921569, a: 1}
-  vegetationDensity: 0.8
+  heightMultiplier: 1
+  heightOffset: 0
+  surfaceColor: {r: 0, g: 1, b: 0, a: 1}
+  subsurfaceColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
