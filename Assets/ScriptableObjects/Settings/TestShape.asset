@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d1f07eb70e70c4691407d6bd70e3e5, type: 3}
+  m_Name: TestShape
+  m_EditorClassIdentifier: 
+  PlanetRadius: 500
+  MaxTerrainHeight: 100
+  MaxTerrainDepth: 100
+  ChunkSize: 16
+  ChunkResolution: 16
+  NoiseLayers:
+  - Name: Terrain
+    Enabled: 1
+    UseFirstLayerAsMask: 0
+    Settings:
+      filterType: 0
+      simpleNoiseSettings:
+        Strength: 18.18
+        BaseRoughness: 1
+        Roughness: 2
+        NumLayers: 4
+        Persistence: 0.5
+        MinValue: 0
+        Centre: {x: 0, y: 0, z: 0}
+      rigidNoiseSettings:
+        Strength: 0
+        BaseRoughness: 0
+        Roughness: 0
+        NumLayers: 0
+        Persistence: 0
+        MinValue: 0
+        Centre: {x: 0, y: 0, z: 0}
+        WeightMultiplier: 0
+      caveNoiseSettings:
+        seed: 0
+        caveType: 0
+        baseFrequency: 0.05
+        octaves: 3
+        lacunarity: 2
+        persistence: 0.5
+        threshold: 0.3
+        strength: 5
+        useWarping: 1
+        warpStrength: 0.5
+        fractureVerticalScale: 0.3
+        fractureHorizontalScale: 2
+        fractureSharpness: 2
+        stratifiedLayerScale: 2
+        spongeConnectivity: 0.3
+  - Name: Mountains
+    Enabled: 1
+    UseFirstLayerAsMask: 1
+    Settings:
+      filterType: 1
+      simpleNoiseSettings:
+        Strength: 0.5
+        BaseRoughness: 1
+        Roughness: 2
+        NumLayers: 4
+        Persistence: 0.5
+        MinValue: 0
+        Centre: {x: 0, y: 0, z: 0}
+      rigidNoiseSettings:
+        Strength: 6.52
+        BaseRoughness: 1
+        Roughness: 2
+        NumLayers: 5
+        Persistence: 0.5
+        MinValue: 0
+        Centre: {x: 0, y: 0, z: 0}
+        WeightMultiplier: 1
+      caveNoiseSettings:
+        seed: 0
+        caveType: 0
+        baseFrequency: 0.05
+        octaves: 3
+        lacunarity: 2
+        persistence: 0.5
+        threshold: 0.3
+        strength: 5
+        useWarping: 1
+        warpStrength: 0.5
+        fractureVerticalScale: 0.3
+        fractureHorizontalScale: 2
+        fractureSharpness: 2
+        stratifiedLayerScale: 2
+        spongeConnectivity: 0.3

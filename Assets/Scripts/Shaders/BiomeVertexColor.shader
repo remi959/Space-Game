@@ -2,6 +2,7 @@ Shader "Custom/BiomeVertexColor"
 {
     Properties
     {
+        _Color ("Color", Color) = (1,1,1,1)
         _Smoothness ("Smoothness", Range(0,1)) = 0.5
     }
     
@@ -43,6 +44,7 @@ Shader "Custom/BiomeVertexColor"
             };
             
             CBUFFER_START(UnityPerMaterial)
+                half4 _Color;
                 half _Smoothness;
             CBUFFER_END
             
@@ -52,7 +54,7 @@ Shader "Custom/BiomeVertexColor"
                 output.positionCS = TransformObjectToHClip(input.positionOS.xyz);
                 output.normalWS = TransformObjectToWorldNormal(input.normalOS);
                 output.positionWS = TransformObjectToWorld(input.positionOS.xyz);
-                output.color = input.color;
+                output.color = input.color * _Color;
                 return output;
             }
             

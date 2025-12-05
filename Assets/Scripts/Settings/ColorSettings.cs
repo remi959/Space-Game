@@ -1,0 +1,7 @@
+using UnityEngine;
+
+[CreateAssetMenu( menuName = "Planet/Color Settings")]
+public class ColorSettings : ScriptableObject
+{
+    public Color PlanetColor = Color.white;
+}
